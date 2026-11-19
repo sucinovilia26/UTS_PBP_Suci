@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity() {
             val teksSatu = satu.text.toString().trim()
             val teksDua = dua.text.toString().trim()
 
+            // TODO-02: validasi kedua String tidak kosong; beri error dan hentikan proses
             if (teksSatu.isEmpty() || teksDua.isEmpty()) {
                 if (teksSatu.isEmpty()) {
                     satu.error = "Nama peserta tidak boleh kosong"

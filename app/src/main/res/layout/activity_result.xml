@@ -16,5 +16,5 @@
         android:id="@+id/tvTotal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="TODO_TEXT_SIZE" />
+        android:textSize="18sp" />
 </LinearLayout>
