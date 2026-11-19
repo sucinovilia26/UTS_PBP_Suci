@@ -34,33 +34,28 @@ class MainActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
+            /* TODO-01: konversi aman ke Int? */ null
             val jumlah = jumlahView.text.toString().trim().toIntOrNull()
+            // FIXME-04: hitung dengan operasi perkalian Int
             val tarif: Int = 75000
             val total: Int = jumlah?.times(tarif) ?:
+            // TODO-03: validasi Int dalam rentang 1..10; beri error dan hentikan proses
             if (jumlah == null || jumlah < 1 || jumlah > 10) {
                 jumlahView.error = "Jumlah tiket harus antara 1 dan 10"
                 Toast.makeText(this, "Jumlah tiket harus antara 1 dan 10", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
-
+            // TODO-06: kirim teksSatu sebagai String
+            // TODO-07: kirim teksDua sebagai String
+            // TODO-08: kirim jumlah sebagai Int
+            // TODO-09: kirim total sebagai Int
             val intent = Intent(this, ResultActivity::class.java)
             intent.putExtra("NAMA", teksSatu)
             intent.putExtra("EVENT", teksDua)
             intent.putExtra("JUMLAH", total)
+            intent.putExtra("TOTAL", jumlah)
             startActivity(intent)
-
-            //val jumlah: Int? = /* TODO-01: konversi aman ke Int? */ null
-// TODO-02: validasi kedua String tidak kosong; beri error dan hentikan proses
-// TODO-03: validasi Int dalam rentang 1..10; beri error dan hentikan proses
-           // val tarif: Int = 75000
-           // val total: Int = 0 // FIXME-04: hitung dengan operasi perkalian Int
-// TODO-05: buat Explicit Intent menuju ResultActivity
-// TODO-06: kirim teksSatu sebagai String
-// TODO-07: kirim teksDua sebagai String
-// TODO-08: kirim jumlah sebagai Int
-// TODO-09: kirim total sebagai Int
-// TODO-10: buka Activity tujuan
         }
     }
 }

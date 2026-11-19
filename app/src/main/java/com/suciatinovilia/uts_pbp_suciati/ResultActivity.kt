@@ -1,6 +1,7 @@
 package com.suciatinovilia.uts_pbp_suciati
 
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 class ResultActivity : AppCompatActivity() {
@@ -20,9 +21,12 @@ class ResultActivity : AppCompatActivity() {
         val total = intent.getIntExtra("TOTAL", 0)
 
         // TODO-15: tampilkan String dan jumlah pada ringkasan
-        ringkasan.text = "Peserta ${satu ?: ""}"
+        ringkasan.text = "Peserta: ${satu ?: ""},\n\n" +
+                "Event: ${dua ?: ""},\n\n" +
+                "Jumlah: ${jumlah.toInt()}"
 
         // TODO-16: tampilkan total (konversi Int ke teks hanya di UI)
         totalView.text = "Total: ${total.toInt()}"
+
     }
 }
